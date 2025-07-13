@@ -18,7 +18,7 @@ stages:
     type: apt
     source:
       packages:
-      - libcap
+      - libcap2-bin
     
   - name: set-image-name-abroot
     type: includes

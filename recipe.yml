@@ -8,8 +8,11 @@ stages:
     maintainer: pixl_xip # Optionally, Replace this with your name
   args:
     DEBIAN_FRONTEND: noninteractive # Set the image environment as non-interactive
-  
-  # Put your custom actions below this comment
+  runs:
+    commands:
+      - echo 'APT::Install-Recommends "1";' > /etc/apt/apt.conf.d/01norecommends
+
+  modules:
 
   - name: example-packages # Sample module using the built-in Apt module to install packages
     type: apt

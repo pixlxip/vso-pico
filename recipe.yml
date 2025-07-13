@@ -30,7 +30,6 @@ stages:
     commands:
     - apt-get autoremove -y
     - apt-get clean
-    - lpkg --lock
 
   - name: cleanup2
     type: shell
